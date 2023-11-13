@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -40,7 +41,19 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 120.0),
             // TODO: Remove filled: true values (103)
-            // TODO: Add TextField widgets (101)
+            const TextField(
+              decoration: InputDecoration(
+                filled: true,
+                label: Text("UserName"),
+              ),
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                filled: true,
+                label: Text("Password"),
+              ),
+              obscureText: true,
+            ),
             // TODO: Add button bar (101)
           ],
         ),
